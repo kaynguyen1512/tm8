@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import FloatingContact from '@/components/FloatingContact';
 import IntroductionPage from '@/pages/IntroductionPage';
 import HskCoursePage from '@/pages/HskCoursePage';
+import DoanhNghiepCoursePage from '@/pages/DoanhNghiepCoursePage';
 
 function HomePage() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
   const pathname = usePathname();
   const isIntroductionPage = pathname.startsWith('/gioi-thieu');
   const isHskCoursePage = pathname === '/khoa-hoc/luyen-thi-hsk-hskk';
+  const isDoanhNghiepPage = pathname === '/khoa-hoc/doanh-nghiep';
 
   useEffect(() => {
     if (!isIntroductionPage || !window.location.hash) return;
@@ -60,7 +62,9 @@ export default function App() {
 
   return (
     <>
-      {isHskCoursePage ? (
+      {isDoanhNghiepPage ? (
+        <DoanhNghiepCoursePage />
+      ) : isHskCoursePage ? (
         <HskCoursePage />
       ) : isIntroductionPage ? (
         <IntroductionPage />
