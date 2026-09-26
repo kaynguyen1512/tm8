@@ -420,7 +420,7 @@ export default function TrucTuyenCoursePage() {
   return (
     <div className="relative w-full">
       <CourseHero
-        imageSrc="https://res.cloudinary.com/qugyphlv/image/upload/v1789277138/hoc-tieng-trung-truc-tuyen-tai-thanhmaihsk.png"
+        imageSrc="https://res.cloudinary.com/qugyphlv/image/upload/v1789277136/hoc-tieng-trung-truc-tuyen-online-640x400.png"
         imageAlt="Học tiếng Trung trực tuyến tại ThanhMaiHSK"
         label="Khóa Học"
         heading="Hán Ngữ Tích Hợp 3.0 Trực Tuyến"
