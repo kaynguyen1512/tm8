@@ -15,6 +15,7 @@ import HskCoursePage from '@/pages/HskCoursePage';
 import DoanhNghiepCoursePage from '@/pages/DoanhNghiepCoursePage';
 import TrucTuyenCoursePage from '@/pages/TrucTuyenCoursePage';
 import TreEmCoursePage from '@/pages/TreEmCoursePage';
+import BranchesPage from '@/pages/BranchesPage';
 
 function HomePage() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
   const isDoanhNghiepPage = pathname === '/khoa-hoc/doanh-nghiep';
   const isTrucTuyenPage = pathname === '/khoa-hoc/han-ngu-tich-hop-truc-tuyen';
   const isTreEmPage = pathname === '/khoa-hoc/tre-em';
+  const isBranchesPage = pathname === '/chi-nhanh';
 
   useEffect(() => {
     if (!isIntroductionPage || !window.location.hash) return;
@@ -66,7 +68,9 @@ export default function App() {
 
   return (
     <>
-      {isTreEmPage ? (
+      {isBranchesPage ? (
+        <BranchesPage />
+      ) : isTreEmPage ? (
         <TreEmCoursePage />
       ) : isTrucTuyenPage ? (
         <TrucTuyenCoursePage />
