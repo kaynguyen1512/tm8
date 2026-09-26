@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Menu, Phone, X, ChevronDown } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Chi Nhánh', href: '#chi-nhanh' },
+  { label: 'Chi Nhánh', href: '/chi-nhanh' },
   { label: 'Thư Viện', href: '#thu-vien' },
 ];
 
